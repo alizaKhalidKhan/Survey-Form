@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey form and must be filled completely</p>
+    <div class="form">
+        <form action="POST" id="survey-form">
+            <fieldset>
+            <legend>Name</legend>
+            <label for="name" id="name-label">Enter Your Full Name<input type="text" name="name" id="name" required placeholder="Enter your name"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Email</legend>
+                <label for="email" id="email-label">Enter Your Complete Email<input type="email" name="email" id="email" required placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@domain.com)"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Age</legend>
+                <label for="number" id="number-label">Enter Your Correct Age<input type="number" name="number" id="number" required placeholder="Age : 18"  min="18" max="100" title="Please enter a valid age from 18 to 100"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Your favourite subject</legend>
+                <select name="options" id="dropdown">
+                    <option value="0" selected disabled>Your favourite subject?</option>
+                    <option value="1">Computer Science</option>
+                    <option value="2">Biology</option>
+                    <option value="3">Commerce</option>
+                </select>
+            </fieldset>
+            <fieldset class="ids">
+                <legend>What is your favorite programming language?</legend>
+                <label><input type="radio" name="language" value="JavaScript" required> JavaScript</label>
+                <label><input type="radio" name="language" value="Python"> Python</label>
+                <label><input type="radio" name="language" value="Java"> Java</label>
+            </fieldset>
+            <fieldset class="ids">
+                <legend>Which frameworks have you used? (Select all that apply)</legend>
+                <label>
+                  <input type="checkbox" name="framework" value="React"> React
+                </label><br>
+                <label>
+                  <input type="checkbox" name="framework" value="Angular"> Angular
+                </label><br>
+                <label>
+                  <input type="checkbox" name="framework" value="Vue"> Vue
+                </label><br>
+                <label>
+                  <input type="checkbox" name="framework" value="Django"> Django
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="comments">Additional Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+            </fieldset>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
